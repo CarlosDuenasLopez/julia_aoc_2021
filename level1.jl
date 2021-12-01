@@ -24,15 +24,15 @@ for num in 1:length(int_lines)-2
     push!(sums, sum(int_lines[num:num+2]))
 end
 
-old_n = sums[1]
-count = 0
-for n in sums[2:length(sums)]
-    global count
-    global old_n
-    if n > old_n
-        count += 1
-    old_n = n
+last = sums[1]
+r = 0
+for i in sums[2:length(sums)]
+    global r
+    global last
+    if i > last
+        r += 1
+    last = i
     end
 end
 
-println(count)
+println(r)
