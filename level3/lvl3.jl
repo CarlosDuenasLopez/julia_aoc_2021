@@ -1,32 +1,32 @@
 include("../aoc_helper.jl")
 using .helper
 
-function my_filter(m_lines, op)
-    for i in 1:length(m_lines[1])
-        c = [parse(Bool, l[i]) for l in m_lines]
+function my_filter(lines, op)
+    for i in 1:length(lines[1])
+        c = [parse(Bool, l[i]) for l in lines]
         ok = op(count(c), length(c)/2) ? '1' : '0'
-        m_lines = [l for l in m_lines if l[i]==ok]
-        if length(m_lines) == 1
-            return m_lines[1]
+        lines = [l for l in lines if l[i]==ok]
+        if length(lines) == 1
+            return lines[1]
         end
     end
 end
 
 
-function day02(input::String = readInput("day3_in.txt"))
+function day03(input::String = readInput("day3_in.txt"))
     lines = split(input)
     cols = []
-    gamma = eps = ""
+    γ = ϵ = ""
     for i in 1:length(lines[1])
         push!(cols, [parse(Bool, l[i]) for l in lines])
     end
     for c in cols
         if count(c) > length(cols[1])/2
-            gamma *= "1"
-            eps *= "0"
+            γ *= "1"
+            ϵ *= "0"
         else
-            gamma *= "0"
-            eps *= "1"
+            γ *= "0"
+            ϵ *= "1"
         end
     end
 
@@ -35,7 +35,7 @@ function day02(input::String = readInput("day3_in.txt"))
     l_lines = copy(lines)
     oxy = my_filter(m_lines, >=)
     co = my_filter(l_lines, <)
-    (parse(Int, gamma, base=2) * parse(Int, eps, base=2), parse(Int, co, base=2) * parse(Int, oxy, base=2))
+    (parse(Int, γ, base=2) * parse(Int, ϵ, base=2), parse(Int, co, base=2) * parse(Int, oxy, base=2))
 end
 
-println(day02())
+println(day03())
