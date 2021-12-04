@@ -8,4 +8,12 @@ function readInput(path::String)
 end
 export readInput
 
+function lprint(l)
+    for line ∈ l
+        println(line)
+    end
+    
+end
+export lprint
+
 end

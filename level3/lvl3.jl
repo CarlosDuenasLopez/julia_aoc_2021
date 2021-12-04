@@ -1,4 +1,4 @@
-include("../aoc_helper.jl")
+include("../utilities/aoc_helper.jl")
 using .helper
 
 function my_filter(lines, op)
@@ -11,8 +11,6 @@ function my_filter(lines, op)
         end
     end
 end
-
-
 function day03(input::String = readInput("day3_in.txt"))
     lines = split(input)
     cols = []
@@ -29,7 +27,6 @@ function day03(input::String = readInput("day3_in.txt"))
             ϵ *= "1"
         end
     end
-
     #part2
     m_lines = copy(lines)
     l_lines = copy(lines)
