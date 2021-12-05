@@ -31,3 +31,10 @@ Using Advent of code to learn the beautiful Julia Programming Language
 | 23  |        |        |
 | 24  |        |        |
 | 25  |        |        |
+
+## How to run
+
+Julia needs to installed, all code written in version 1.7.
+
+download desired level folder and utilities, place in same directory
+and run with `julia level_/lvl_.jl `
