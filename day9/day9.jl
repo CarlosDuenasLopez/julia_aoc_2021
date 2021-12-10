@@ -7,9 +7,11 @@ function day9()
     og_lows = filter(x->x != false, og_lows)
     basin_sizes = []
     for low in og_lows[1:end]
-        push!(basin_sizes, basin(Set([(low[1], low[2])]), A))
+        # push!(basin_sizes, basin(Set([(low[1], low[2])]), A))
+        basin_2(low, A, 0)
+        break
     end
-    r1, (*(sort(basin_sizes)[end-2:end]...))
+    # r1, (*(sort(basin_sizes)[end-2:end]...))
     
 end
 
@@ -42,6 +44,16 @@ function basin(fields, A)
         return basin(fields, A)
     end
 end
+
+
+# r = Set()
+# function basin_2(field, A, og)
+#     neighs = neighbors(field..., A)
+#     size = 1
+#     for n in neighs
+#         size += 
+#     end
+# end
 
 function all_greater(og, neighbors, A)
     for n in neighbors
