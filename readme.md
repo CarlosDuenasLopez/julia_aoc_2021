@@ -16,9 +16,9 @@ Using Advent of code to learn the beautiful Julia Programming Language
 |  8  |   ✅   |   ✅   |
 |  9  |   ✅   |   ✅   |
 | 10  |   ✅   |   ✅   |
-| 11  |        |        |
-| 12  |        |        |
-| 13  |        |        |
+| 11  |   ✅   |   ✅   |
+| 12  |   ✅   |   ✅   |
+| 13  |   ✅   |   ✅   |
 | 14  |        |        |
 | 15  |        |        |
 | 16  |        |        |
